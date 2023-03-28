@@ -1,0 +1,77 @@
+/*
+ * Emerald is a simple blog theme built for Jekyll.
+ */
+
+/*- Base reset -*/
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+$baseline-height: 2rem;
+
+/*- Base color -*/
+
+$main-color: #141845;
+$background-color: #FDFDFD;
+$text-color: #222222;
+
+$link-color: $main-color;
+
+$theme-color: $main-color;
+
+// Dark theme (not used)
+$main-color-dark: #FDFDFD;
+$background-color-dark: #141845;
+$text-color-dark: #FDFDFD;
+
+
+// Addition colors
+$light-grey: #CBD6E2;
+$disabled-color: rgba(103, 113, 144, 1.0);
+$background-color2: #F5F8FA;
+$dark-grey: #33475b;
+
+/*- Base settings -*/
+
+html {
+        background-color: $background-color;
+        @media (min-width: 940px) {
+                font-size: 18px;
+        }
+        line-height: $baseline-height;
+        color: $text-color;
+}
+
+/*- Link -*/
+a {
+        color: $link-color;
+        text-decoration: none;
+        font-weight: 700;
+        &:hover,
+        &:focus {
+                color: darken($link-color, 5%);
+        }
+}
+
+article .content a:not(.footnote):not(.anchorjs-link) {
+        font-weight: normal;
+        border-bottom: 1px solid rgba($link-color, 0.35);
+
+        &:hover, &:focus {
+                border-bottom-color: $link-color;
+        }
+}
+
+article .content .footnote {
+        color: #4280E6;
+        font-weight: normal;
+}

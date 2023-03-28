@@ -1,0 +1,30 @@
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="title" content="{{ page.title | site.title }}">
+  <meta property="og:title" content="{{ page.title | site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+
+  {% seo %}
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PDMNKRX');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <link rel="icon" href="{% img_url favicon.png %}" type="image/png" />
+
+  <!-- CSS & fonts -->
+  <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400%7CSource+Sans+Pro:300,400,700,900,400italic%7CSignika:700,300,400,600' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <!-- RSS -->
+  <link href="{{ '/feed.xml' | absolute_url }}" type="application/rss+xml" rel="alternate" title="RSS 2.0 Feed" />
+
+</head>
